@@ -1,0 +1,31 @@
+version: "2.0"
+services:
+    ros2_driver:
+        image: ${ARCH}humble/ros2_driver:${TAG}
+        network_mode: host
+        pid: host
+        container_name: ros2_driver
+        env_file: $ENV_FILE
+        environment:
+            - DISPLAY=$DISPLAY
+        privileged: true
+        user: root
+        tty: true
+        volumes:
+            - /dev:/dev:rw
+            - type: bind
+              source: /home/user/workspace/theimagingsource_ros/src/
+              target: /home/theimagingsource_ros/colcon_ws/src
+            - type: bind
+              source: $PRODUCTION_PATH/docker/rmw
+              target: /rmw
+        command: bash -c "
+                   source /opt/ros/humble/setup.bash;
+                   source ./image_pipeline_ws/install/setup.bash --extend;
+                   cd colcon_ws;
+                   colcon build --packages-select stereocam_publisher;
+                   cd ..;
+                   source ./colcon_ws/install/setup.bash;
+                   ros2 launch stereocam_publisher launch.py
+                   "
+

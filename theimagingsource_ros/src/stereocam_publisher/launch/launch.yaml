@@ -1,0 +1,11 @@
+launch:
+
+- node:
+    pkg: "stereocam_publisher"
+    exec: "leftcamera_publisher"
+    name: "leftcamera"
+    
+- node:
+    pkg: "stereocam_publisher"
+    exec: "rightcamera_publisher"
+    name: "rightcamera"

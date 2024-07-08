@@ -1,0 +1,25 @@
+{   
+    "format" : "video/x-raw",
+    "pixelformat" : "BGRX",
+    "width" : 1920,
+    "height" : 1080,
+    "framerate": "30/1",
+          
+    "properties":
+    [
+                {"property":"BalanceWhiteAuto", "value":"Off"},
+                {"property":"BalanceWhiteRed", "value":1.9},
+                {"property":"BalanceWhiteGreen", "value":1.0},
+                {"property":"BalanceWhiteBlue", "value":1.9},
+                {"property":"ExposureAuto","value":"Off"},
+                {"property":"ExposureTime", "value":16666.0},
+                {"property":"GainAuto", "value":"Off"},
+                {"property":"Gain", "value":3.0},
+
+                {"property":"TriggerActivation", "value":"Rising Edge"},
+                {"property":"TriggerDelay", "value":0.0},
+                {"property":"TriggerSelector", "value":"Frame Start"}
+    ]
+               
+}
+

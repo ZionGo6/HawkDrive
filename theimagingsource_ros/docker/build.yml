@@ -1,0 +1,9 @@
+version: "2.0"
+services:
+    ros2_driver:
+        image: ${ARCH}humble/ros2_driver:${TAG}
+        build:
+            context: $PRODUCTION_PATH/docker/
+            dockerfile: Dockerfile.${ARCH}
+        container_name: ros2_driver
+

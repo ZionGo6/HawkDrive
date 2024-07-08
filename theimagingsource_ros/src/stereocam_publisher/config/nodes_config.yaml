@@ -1,0 +1,48 @@
+left:
+    ros__parameters:
+      serial: "45020167"
+      imageprefix: "left"
+      config_path: "/home/theimagingsource_ros/colcon_ws/src/stereocam_publisher/config/camera_config.json"
+      calib_path: "/home/theimagingsource_ros/colcon_ws/src/stereocam_publisher/config/calib_config.yaml"
+      image_height: "1080"
+      image_width: "1920"
+      intrinsic_matrix: [2362.1903, 0.000000 , 982.1315,
+                         0.000000 ,  2350.091, 510.22,
+                         0.000000 , 0.000000 ,  1.000000] 
+      
+      distortion_coefficients: [-0.086633, 0.17838, 0.00573, 0.00024, 0.000000]
+
+      distortion_model: "plumb_bob"
+      projection_matrix: [2362.1903, 0.000000, 982.1315, 0.000000,
+                          0.000000 , 2350.091, 510.22  , 0.000000,
+                          0.000000 , 0.000000, 1.000000, 0.000000]
+      
+      rectification_matrix: [1.0, 0.0, 0.0,
+                             0.0, 1.0, 0.0,
+                             0.0, 0.0, 1.0] 
+
+  
+
+right:
+    ros__parameters:
+      serial: "45020169"
+      imageprefix: "right"
+      config_path: "/home/theimagingsource_ros/colcon_ws/src/stereocam_publisher/config/camera_config.json"
+      calib_path: "/home/theimagingsource_ros/colcon_ws/src/stereocam_publisher/config/calib_config.yaml"
+      image_height: "1080"
+      image_width: "1920"
+      intrinsic_matrix: [2364.07 , 0.000000, 986.63, 
+                         0.000000, 2352.98 , 533.28,
+                         0.000000, 0.000000, 1.000000] 
+      
+      distortion_coefficients: [-0.071408, -0.003681, 0.001090, -0.00274, 0.000000]
+
+      distortion_model: "plumb_bob"
+      projection_matrix: [2364.07 , 0.000000, 986.63  , 0.000000,
+                          0.000000, 2352.98 , 533.28  , 0.000000,
+                          0.000000, 0.000000, 1.000000, 0.000000]
+      
+      rectification_matrix: [1.0, 0.0, 0.0,
+                             0.0, 1.0, 0.0,
+                             0.0, 0.0, 1.0] 
+
